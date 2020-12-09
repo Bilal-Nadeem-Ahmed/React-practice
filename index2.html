@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--import babel which helps browser understand jsx -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--React import cdn-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <!--cdn for react Dom-->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  <title>react practice 2</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type = text/babel>
+  class Apps extends React.Component {
+    state={
+      name: "bilal",
+      age: 65
+    }
+    handleChange=(e)=>{
+      this.setState({
+        name: e.target.value
+      })
+
+    }
+    handleSubmit = (e)=>{
+      e.preventDefault();
+      console.log("form submitted ", this.state.name)
+    }
+    render(){
+      return(
+        <div className="app-contents">
+          <h1>My name is {this.state.name}</h1>
+          {/* by using onsubmit here instead of onclick, we also prevent the default when a person chicks the enter key as by default that also causes page reload as well as when one clicks the submit button*/ }
+          <form onSubmit={this.handleSubmit}>
+          <input type="text" onChange={this.handleChange}/> 
+          <button>Submit</button> 
+          </form>
+        </div>
+      )
+    }
+  }
+  ReactDOM.render(<Apps />, document.getElementById("app"))
+  </script>
+  
+</body>
+</html>

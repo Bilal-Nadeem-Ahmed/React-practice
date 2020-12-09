@@ -22,20 +22,21 @@
     <!--type text/ babel tells babel to make this readable by js-->
     <script type="text/babel">
       class App extends React.Component {
-        // state is a js object that will contain some data or ui state
+        // state is a js object that will contain some data or ui state,  The state object is where you store property values that belongs to the component there is also a this.setState which is used to change the state
         state = {
           name: "bilal",
           age: 30,
         };
-        handleClick(e) {
-          alert("Click, click , click , click , clickings");
-        }
-        handleMouseOver(e) {
+        handleClick = (e) => {
+          // alert("Click, click , click , click , clickings");
+          this.setState({ name: "Uuzi" });
+        };
+        handleMouseOver = (e) => {
           console.log(e);
-        }
-        handleCopy(e) {
+        };
+        handleCopy = (e) => {
           console.log("yes you can");
-        }
+        };
         // here render and the object is what will be shown
         render() {
           return (
