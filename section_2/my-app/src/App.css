@@ -1,0 +1,120 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background-color: white;
+  width: 50vw;
+  height: 70vh;
+  margin: auto;
+  border-radius: 5%;
+  box-shadow: 0 0 30px black;
+  margin-top: 10vh;
+  overflow: hidden;
+}
+.question-section {
+  background-image: linear-gradient(to right, #d38312, #a83279);
+  color: white;
+}
+.question-text {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-count {
+  height: 8vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 200%;
+}
+
+.answer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10%;
+}
+
+button {
+  width: 90%;
+  height: 7vh;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  text-align: left;
+  font-size: x-large;
+  align-items: center;
+  border: 1px solid grey;
+  cursor: pointer;
+  margin: 10px;
+  padding: 15px;
+  outline: none;
+}
+button:hover {
+  border: 5px solid #a83279;
+  box-shadow: 0 0 30px #d38312;
+}
+.score-section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 70vh;
+  margin: auto;
+  border-radius: 5%;
+  box-shadow: 0 0 30px black;
+  background-image: linear-gradient(to right, #d38312, #a83279);
+}
+.score-section p {
+  font-size: 400%;
+  font-weight: bold;
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .app {
+    background-color: white;
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+    border-radius: 5%;
+    box-shadow: 0 0 30px black;
+    margin-top: 10vh;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 150%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+  .question-section {
+    padding-top: 10%;
+    text-align: center;
+  }
+  button {
+    font-size: large;
+  }
+
+  .score-section {
+    width: 80vw;
+    height: 70vh;
+  }
+  .score-section p {
+    font-size: 200%;
+  }
+}
